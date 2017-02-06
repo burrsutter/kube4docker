@@ -1,4 +1,4 @@
-FROM java:8-jre-alpine
+FROM openjdk:8
 
 ENV JAVA_APP_JAR vertx-hello-project-1.0-SNAPSHOT-fat.jar
 

@@ -8,7 +8,7 @@ public class Server extends AbstractVerticle {
   public void start() {
     String hostname = System.getenv().getOrDefault("HOSTNAME", "unknown");
     vertx.createHttpServer()
-        .requestHandler(req -> req.response().end("Ahoj Vert.x on " + hostname))
+        .requestHandler(req -> req.response().end("Bonjour Vert.x on " + hostname))
         .listen(8080);
   }
 
