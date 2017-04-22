@@ -2,7 +2,7 @@
 
 ### Prerequisites:
 * minishift (from github)
-* maven (from Apache, using paths.d trick on Mac)
+* mvn (from Apache, using paths.d trick on Mac)
 * docker (instead via Docker CE)
 * kubectl (installed via brew)
 * oc (installed via minishift)
@@ -32,6 +32,7 @@ Minishift version: 1.0.0-rc.2
 ./minishift start
 
 put oc in the PATH
+
 export PATH=~/.minishift/cache/oc/v1.5.0-rc.0/:$PATH
 
 ### make yourself a cluster-admin
