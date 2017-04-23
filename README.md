@@ -78,5 +78,8 @@ https://screencast.com/t/vglaeMHHbqW
 Now follow steps 0 to 13
 
 
+###
+vertx-demo-no-dockerfile - demonstrates how to use the S2I solution which means you do not need to provide a Dockerfile
 
+vertx-demo-fabric8 - uses the Maven plugin, no Dockerfile
 
