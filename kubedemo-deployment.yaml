@@ -1,24 +1,29 @@
-apiVersion: v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
     app: myvertx
   name: myvertx
+  namespace: kubedemo
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: myvertx  
   template:
-  metadata:
-    labels:
-      app: myvertx
-  spec:    
-    containers:
-    - name: myvertx
-     image: burr/myvertx:v1
-     ports:
-     - containerPort: 80
-    livenessProbe:
-      httpGet:
-        path: /
-        port: 8080
-      initialDelaySeconds: 3
-      periodSeconds: 3
+    metadata:
+      labels:
+        app: myvertx
+    spec:    
+      containers:
+        - name: myvertx        
+          image: burr/myvertx:v1
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 3
+          ports:
+          - containerPort: 8080
+      
