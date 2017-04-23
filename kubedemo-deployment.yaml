@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  labels:
+    app: myvertx
+  name: myvertx
+spec:
+  replicas: 1
+  template:
+  metadata:
+    labels:
+      app: myvertx
+  spec:    
+    containers:
+    - name: myvertx
+     image: burr/myvertx:v1
+     ports:
+     - containerPort: 80
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 8080
+      initialDelaySeconds: 3
+      periodSeconds: 3
