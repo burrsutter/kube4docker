@@ -12,7 +12,7 @@ oc login
 developer
 developer
 
-oc new-project kubedemo2
+oc new-project s2idemo
 
 oc new-app redhat-openjdk18-openshift~https://github.com/burrsutter/kube4docker --context-dir=vertx-demo-no-dockerfile -e JAVA_APP_JAR=vertx-no-dockerfile-1.0-SNAPSHOT-fat.jar
 
