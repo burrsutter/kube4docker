@@ -18,11 +18,11 @@ spec:
       containers:
         - name: myvertx        
           image: burr/myvertx:v1
-          livenessProbe:
+          readinessProbe:
             httpGet:
               path: /
               port: 8080
-            initialDelaySeconds: 10
+            initialDelaySeconds: 5
             periodSeconds: 3
           ports:
           - containerPort: 8080
