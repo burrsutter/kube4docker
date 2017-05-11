@@ -22,7 +22,7 @@ spec:
             httpGet:
               path: /
               port: 8080
-            initialDelaySeconds: 5
+            initialDelaySeconds: 10
             periodSeconds: 3
           ports:
           - containerPort: 8080
