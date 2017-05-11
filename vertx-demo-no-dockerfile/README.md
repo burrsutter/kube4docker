@@ -1,4 +1,4 @@
-
+Leverages the Openshift S2I feature 
 
 mvn clean compile package
 
