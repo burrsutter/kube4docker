@@ -22,6 +22,6 @@ oc expose service kube4docker
 
 oc get routes
 
-curl kube4docker-kubedemo2b.192.168.99.101.nip.io/hello 
+curl kube4docker-s2idemo.192.168.99.101.nip.io
 
 
