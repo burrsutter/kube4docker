@@ -13,7 +13,7 @@ NODEPORT=$(kubectl --namespace=kubedemo get services myvertx -o yaml | grep node
 echo $NODEPORT
 
 # Combine the two, trimming off whitespace
-THEURL=$IP:$(echo $NODEPORT | awk '{print $1}')
+THEURL=$IP:$(echo $NODEPORT | awk '{print $1}')/hello
 
 echo $THEURL
 

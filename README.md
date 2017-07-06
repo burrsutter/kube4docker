@@ -1,19 +1,21 @@
 # Kubernetes Demo
 
 ### Prerequisites:
-* minishift (from github)
+* CDK minishift 
 * mvn (from Apache, using paths.d trick on Mac)
 * docker (instead via Docker CE)
 * kubectl (installed via brew)
 * oc (installed via minishift)
 
 
-### Download minishift RC2:
-https://github.com/minishift/minishift/releases/tag/v1.0.0-rc.2
+### Download CDK minishift:
+https://developers.redhat.com/products/cdk/download/
 
 ./minishift version
 
-Minishift version: 1.0.0-rc.2
+Minishift version: 1.0.0+4f8cb6d
+
+CDK Version: 3.0.0-2
 
 ./minishift config set memory 7000
 
@@ -25,18 +27,15 @@ Minishift version: 1.0.0-rc.2
 
 ./minishift config view
 
-./minishift addons install --defaults
-
-./minishift addons enable cluster-admin
-
 ./minishift start
 
 put oc in the PATH
 
+note: this comes from "minishift oc-env"
+
 export PATH=~/.minishift/cache/oc/v1.5.0-rc.0/:$PATH
 
-### make yourself a cluster-admin
-oc adm policy add-cluster-role-to-user cluster-admin admin --as=system:admin
+
 
 oc login -u admin -p admin
 
@@ -75,11 +74,16 @@ admin
 https://screencast.com/t/vglaeMHHbqW
 
 
-Now follow steps 0 to 13
+Now follow scripts 0 to 13
 
 
 ###
 vertx-demo-no-dockerfile - demonstrates how to use the S2I solution which means you do not need to provide a Dockerfile
 
 vertx-demo-fabric8 - uses the Maven plugin, no Dockerfile
+
+boot-demo - the same endpoint with Spring Boot, using F8 plugin
+
+swarm-demo - the same endpoint with WildFly Swarm, using F8 plugin
+
 

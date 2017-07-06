@@ -1,6 +1,6 @@
 FROM fabric8/java-jboss-openjdk8-jdk:1.2.3
 
-ENV JAVA_APP_JAR vertx-demo-1.0-SNAPSHOT.jar
+ENV JAVA_APP_JAR vertx-hello-project-1.0-SNAPSHOT-fat.jar
 ENV JAVA_OPTIONS -Xmx256m 
 
 EXPOSE 8080
@@ -10,7 +10,7 @@ RUN chmod -R 777 /deployments/
 ADD target/$JAVA_APP_JAR /deployments/
 
 
-## before Fabric8 Image
+## before Fabric8
 # FROM openjdk:8
 
 # ENV JAVA_APP_JAR vertx-hello-project-1.0-SNAPSHOT-fat.jar

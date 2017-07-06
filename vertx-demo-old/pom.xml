@@ -6,12 +6,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.burrsutter.myvertxdemo</groupId>
-  <artifactId>vertx-no-dockerfile</artifactId>
+  <artifactId>vertx-hello-project</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <properties>
     <vertx.version>3.3.2</vertx.version>
-    <main.verticle>com.burrsutter.MainVerticle</main.verticle>
+    <main.verticle>com.burrsutter.myvertxdemo.Server</main.verticle>
   </properties>
 
   <dependencyManagement>

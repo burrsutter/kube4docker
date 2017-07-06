@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo 'This only works if you are on a node in the cluster'
+
 echo 'kubectl --namespace=kubedemo get services myvertx -o yaml \'
 echo '| grep clusterIP \'
 echo '| cut -f2 -d:'
