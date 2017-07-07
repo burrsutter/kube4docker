@@ -1,4 +1,7 @@
-eval "$(vagrant service-manager env)"
+Assumes use of CDK Minishift
+https://developers.redhat.com/products/cdk/download/
+
+minishift docker-env
 
 docker build -t burr/mynode:v1 . 
 
